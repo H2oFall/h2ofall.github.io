@@ -6,6 +6,9 @@
     <h1 id = "rx"></h1>
     <h2 id = "ry"></h2>
     <h3 id = "rz"></h3>
+    <h4 id = "defx"></h1>
+    <h5 id = "defy"></h2>
+    <h6 id = "defz"></h3>
     <script>
       var rx;
       var rz;
@@ -23,13 +26,13 @@
       function draw() {
         rx = rotationX;
           document.getElementById('rx').innerHTML = "x rotation = " + rx;
-          document.getElementById('rx').innerHTML = "Def x = " + defx;
+          document.getElementById('defx').innerHTML = "Def x = " + defx;
         ry = rotationY;
           document.getElementById('ry').innerHTML = "y rotation = " + ry;
-                  document.getElementById('rx').innerHTML = "Def y = " + defy;
+                  document.getElementById('defy').innerHTML = "Def y = " + defy;
         rz = rotationZ;
           document.getElementById('rz').innerHTML = "z rotation = " + rz;
-                  document.getElementById('rx').innerHTML = "Def z = " + defz;
+                  document.getElementById('defz').innerHTML = "Def z = " + defz;
 
         if (rx + 5 < defx){
           document.body.style.backgroundColor = "red";
