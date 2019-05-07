@@ -28,7 +28,7 @@
         rz = rotationZ;
           document.getElementById('rz').innerHTML = "z rotation = " + rz;
 
-        if (rx + 5 < defx < rx-5){
+        if (rx + 5 < defx) || (defx > rx -5){
           document.body.style.backgroundColor = "red";
         }
 
