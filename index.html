@@ -7,12 +7,17 @@
     <h2 id = "ry"></h2>
     <h3 id = "rz"></h3>
     <script>
-      var rx = 0;
-      var rz = 0;
-      var ry = 0;
+      var rx;
+      var rz;
+      var ry;
+      var defx;
+      var defy;
+      var defz;
       function setup(){
         createCanvas(window.innerWidth, window.innerHeight);
-        
+        defx = rotationX;
+        defy = rotationY;
+        defz = rotationZ;
       }
       
       function draw() {
@@ -23,7 +28,9 @@
         rz = rotationZ;
           document.getElementById('rz').innerHTML = "z rotation = " + rz;
 
-        
+        if (rx + 5 < defx < rx-5){
+          document.body.style.backgroundColor = "red";
+        }
 
       }
       
