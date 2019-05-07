@@ -23,12 +23,15 @@
       function draw() {
         rx = rotationX;
           document.getElementById('rx').innerHTML = "x rotation = " + rx;
+          document.getElementById('rx').innerHTML = "Def x = " + defx;
         ry = rotationY;
           document.getElementById('ry').innerHTML = "y rotation = " + ry;
+                  document.getElementById('rx').innerHTML = "Def y = " + defy;
         rz = rotationZ;
           document.getElementById('rz').innerHTML = "z rotation = " + rz;
+                  document.getElementById('rx').innerHTML = "Def z = " + defz;
 
-        if (rx + 5 < defx) || (defx > rx -5){
+        if (rx + 5 < defx){
           document.body.style.backgroundColor = "red";
         }
 
