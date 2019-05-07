@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <h1 id = "rx"></h1>
+    <h2 id = "ry"></h2>
+    <h3 id = "rz"></h3>
+    <script>
+      var rx = 0;
+      var rz = 0;
+      var ry = 0;
+      function setup(){
+        createCanvas(window.innerWidth, window.innerHeight);
+        
+      }
+      
+      function draw() {
+        rx = rotationX;
+          document.getElementById('rx').innerHTML = "x rotation = " + rx;
+        ry = rotationY;
+          document.getElementById('ry').innerHTML = "y rotation = " + ry;
+        rz = rotationZ;
+          document.getElementById('rz').innerHTML = "z rotation = " + rz;
+
+        
+
+      }
+      
+      
+    </script>
+  </body>
+</html>
