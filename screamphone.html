@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <h1 id = "ax"></h1>
+    <h2 id = "rx"></h2>
+    <script>
+      var ax;
+      var axhigh = 0;
+      
+      var rx;
+      function setup(){
+        createCanvas(window.innerWidth, window.innerHeight);
+        
+      }
+      
+      function () {
+        ax = accelerationX;
+        if (ax > axhigh) {
+          axhigh = ax;
+          document.getElementById('ax').innerHTML = "X accel = " + ax;
+        }
+        rx = rotationX;
+        document.getElementById('rx').innerHTML = "x rotation = " + rx;
+      }
+    </script>
+  </body>
+</html>
