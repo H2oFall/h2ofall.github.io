@@ -10,35 +10,18 @@
     <h5 id = "defy"></h2>
     <h6 id = "defz"></h3>
     <script>
-      var rx;
-      var rz;
-      var ry;
-      var defx = 0;
-      var defy = 0;
-      var defz = 0;
-      function setup(){
-        createCanvas(window.innerWidth, window.innerHeight);
-      defx = rotationX;
-      defy = rotationY;
-      defz = rotationZ;
-      }
-      
-      function draw() {
-        rx = rotationX;
-          document.getElementById('rx').innerHTML = "x rotation = " + rx;
-          document.getElementById('defx').innerHTML = "Def x = " + defx;
-        ry = rotationY;
-          document.getElementById('ry').innerHTML = "y rotation = " + ry;
-                  document.getElementById('defy').innerHTML = "Def y = " + defy;
-        rz = rotationZ;
-          document.getElementById('rz').innerHTML = "z rotation = " + rz;
-                  document.getElementById('defz').innerHTML = "Def z = " + defz;
+    let value = 0;
+function draw() {
+  fill(value);
+  rect(25, 25, 50, 50);
+}
+function deviceShaken() {
+  value = value + 5;
+  if (value > 255) {
+    value = 0;
+  }
+}
 
-        if (rx + 5 < defx){
-          document.body.style.backgroundColor = "red";
-        }
-
-      }
       
       
     </script>
