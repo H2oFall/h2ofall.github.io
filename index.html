@@ -13,26 +13,26 @@
       var rx;
       var rz;
       var ry;
+      var defz = 0;
       var defx = 0;
       var defy = 0;
-      var defz = 0;
       function setup(){
         createCanvas(window.innerWidth, window.innerHeight);
+      defz = rotationZ;
       defx = rotationX;
       defy = rotationY;
-      defz = rotationZ;
       }
       
       function draw() {
+        rz = rotationZ;
+          document.getElementById('rz').innerHTML = "z rotation = " + rz;
+          document.getElementById('defz').innerHTML = "Def z = " + defz;
         rx = rotationX;
           document.getElementById('rx').innerHTML = "x rotation = " + rx;
           document.getElementById('defx').innerHTML = "Def x = " + defx;
         ry = rotationY;
           document.getElementById('ry').innerHTML = "y rotation = " + ry;
                   document.getElementById('defy').innerHTML = "Def y = " + defy;
-        rz = rotationZ;
-          document.getElementById('rz').innerHTML = "z rotation = " + rz;
-                  document.getElementById('defz').innerHTML = "Def z = " + defz;
 
         if (rx + 5 < defx){
           document.body.style.backgroundColor = "red";
