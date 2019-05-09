@@ -10,16 +10,22 @@
     <h5 id = "defy"></h2>
     <h6 id = "defz"></h3>
     <script>
-    var value = 0;
+    var value = 1;
+    var value2 = 1;
+    var value3 = 1;
     var r = random(10);
 function draw() {
-  fill(value,value,value);
-  rect(25, 25, 50, 50);
+  fill(value,value2,value3);
+  rect(0, 0, window.innerWidth, window.innerHeight);
 }
 function deviceShaken() {
   value = value * r;
-  if (value > 255) {
+  value2 = value2 * r;
+  value3 = value3 * r;
+  if (value > 255) || (value2 > 255) || (value3 > 255) {
     value = 0;
+    value2 = 0;
+    value3 = 0;
   }
 }
 
